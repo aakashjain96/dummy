@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cart" class="com.capgemini.spring.core.Cart">
+
+		<property name="product">
+			<list>
+				<ref bean="product1"></ref>
+				<ref bean="product2"></ref>
+				<ref bean="product3"></ref>
+				<ref bean="product4"></ref>
+			</list>
+		</property>
+		
+		<property name="map">
+	<map>
+	<entry key="disk1" value="10"></entry>
+	<entry key="disk2" value="30"></entry>
+	<entry key="battery1" value="20"></entry>
+	<entry key="battery2" value="40"></entry>
+	</map>
+	</property>
+	</bean>
+
+	<bean id="product1" class="com.capgemini.spring.core.Product">
+		<property name="productId" value="101"></property>
+		<property name="productName" value="disk1"></property>
+		<property name="productPrice" value="521"></property>
+		
+	</bean>
+	<bean id="product2" class="com.capgemini.spring.core.Product">
+		<property name="productId" value="102"></property>
+		<property name="productName" value="battery1"></property>
+		<property name="productPrice" value="429"></property>
+	
+	</bean>
+		<bean id="product3" class="com.capgemini.spring.core.Product">
+		<property name="productId" value="101"></property>
+		<property name="productName" value="disk2"></property>
+		<property name="productPrice" value="319"></property>
+		
+	</bean>
+	<bean id="product4" class="com.capgemini.spring.core.Product">
+		<property name="productId" value="102"></property>
+		<property name="productName" value="battery2"></property>
+		<property name="productPrice" value="291"></property>
+	
+	</bean>
+
+
+
+
+
+
+</beans>        
+        
+        
